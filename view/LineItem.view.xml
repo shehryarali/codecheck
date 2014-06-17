@@ -1,0 +1,56 @@
+<core:View
+	controllerName="sap.ui.live.view.LineItem"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core" >
+	<Page
+		id="page"
+		title="{name}"
+		showNavButton="true"
+		navButtonPress="handleNavBack" >
+		<footer>
+			<Bar>
+			</Bar>
+		</footer>
+
+		<Table
+			headerText="Standards"
+			items="{standards}" >
+			<columns>
+				<Column
+					hAlign="Left" >
+					<header><Label text="ID" /></header>
+				</Column>
+				<Column
+					hAlign="Left" >
+					<header><Label text="Name" /></header>
+				</Column>
+				<Column
+					hAlign="Left" >
+					<header><Label text="Description" /></header>
+				</Column>
+				<Column
+					hAlign="Left" >
+					<header><Label text="Requirement" /></header>
+				</Column>
+			</columns>
+			<ColumnListItem>
+				<cells>
+					<ObjectIdentifier
+						title="{id}" />
+					<Text
+						text="{name}" />
+					<Text
+						text="{description}" />
+					<List
+						items="{requirements}" >
+						<ObjectListItem
+							title="{body}"
+							>
+						</ObjectListItem>
+					</List>
+				</cells>
+			</ColumnListItem>
+		</Table>
+
+	</Page>
+	</core:View>

@@ -1,0 +1,28 @@
+<core:View
+	controllerName="sap.ui.live.view.Master"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core" >
+	<Page
+		title="{i18n>MasterTitle}" >
+		<List
+			id="list"
+			mode="{device>/listMode}"
+			select="handleListSelect"
+			items="{/surveys}" >
+			<ObjectListItem
+				type="{device>/listItemType}"
+				press="handleListItemPress"
+				title="{name}"
+				>
+				<attributes>
+					<ObjectAttribute text="{id}" />
+					<ObjectAttribute text="{type}" />
+				</attributes>
+			</ObjectListItem>
+		</List>
+		<footer>
+			<Bar>
+			</Bar>
+		</footer>
+	</Page>
+</core:View>

@@ -1,0 +1,31 @@
+<core:View
+	controllerName="sap.ui.live.view.LineItem"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core" >
+	<Page
+		id="page"
+		title="{name}"
+		showNavButton="true"
+		navButtonPress="handleNavBack" >
+		<footer>
+			<Bar>
+			</Bar>
+		</footer>
+		<Table
+			headerText="Questions" >
+			<columns>
+				<Column
+					hAlign="Left" >
+					<header><Label text="Question" /></header>
+				</Column>
+				<ColumnListItem>
+					<cells>
+						<Text
+							text="{Description}" />
+					</cells>
+				</ColumnListItem>
+			</columns>
+		</Table>
+
+	</Page>
+	</core:View>
