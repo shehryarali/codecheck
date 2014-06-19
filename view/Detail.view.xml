@@ -1,0 +1,46 @@
+<core:View
+	controllerName="sap.ui.live.view.Detail"
+	xmlns="sap.m"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:core="sap.ui.core" >
+	<Page
+		title="Survey sections"
+		class="sapUiFioriObjectPage"
+		showNavButton="{device>/isPhone}"
+		navButtonPress="handleNavButtonPress" >
+		<ObjectHeader title="{name}">
+			<attributes>
+				<ObjectAttribute text="{id}" />
+				<ObjectAttribute text="{type}" />
+			</attributes>  
+		</ObjectHeader>
+		<Table
+			headerText="{i18n>LineItemTableHeader}"
+			items="{sections}" >
+			<columns>
+				<Column
+					hAlign="Left" >
+					<header><Label text="ID" /></header>
+				</Column>
+				<Column
+					hAlign="Left" >
+					<header><Label text="Name" /></header>
+				</Column>
+			</columns>
+			<ColumnListItem
+				type="Navigation"
+				press="handleLineItemPress" >
+				<cells>
+					<ObjectIdentifier
+						title="{id}" />
+					<Text
+						text="{name}" />
+				</cells>
+			</ColumnListItem>
+		</Table>
+		<footer>
+			<Bar>
+			</Bar>
+		</footer>
+	</Page>
+</core:View>
